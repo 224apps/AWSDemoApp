@@ -9,4 +9,7 @@ target 'AwsDemoApp' do
 pod 'AWSMobileClient'
 pod 'AWSUserPoolsSignIn'
 pod 'AWSAuthUI'
+pod 'AWSFacebookSignIn'
+pod 'AWSGoogleSignIn'
+pod 'GoogleSignIn'
 end

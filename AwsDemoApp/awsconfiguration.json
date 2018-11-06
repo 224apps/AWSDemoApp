@@ -30,5 +30,13 @@
     "Default": {
       "Region": "us-east-1"
     }
+  },
+  "GoogleSignIn": {
+    "ClientId-iOS": "91685199714-dqf06q9me9kcr53n3i4fqubv9usp2qnu.apps.googleusercontent.com",
+    "Permissions": "email,profile,openid"
+  },
+  "FacebookSignIn": {
+    "AppId": "1794249910701271",
+    "Permissions": "public_profile"
   }
 }

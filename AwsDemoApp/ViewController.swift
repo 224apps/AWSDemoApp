@@ -10,6 +10,14 @@ import UIKit
 import AWSMobileClient
 import AWSAuthUI
 
+
+
+//91685199714-segp747k47ee51uf4is7uj6fd39tvlmo.apps.googleusercontent.com
+
+//lKaX-QYopZU3iwmC-grAGxA2
+
+
+//ios: Client ID 91685199714-dqf06q9me9kcr53n3i4fqubv9usp2qnu.apps.googleusercontent.com
 class ViewController: UIViewController {
     
     override func viewDidLoad() {

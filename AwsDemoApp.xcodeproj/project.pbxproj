@@ -12,7 +12,7 @@
 		49689ACE21916A0C00B2A80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49689ACC21916A0C00B2A80A /* Main.storyboard */; };
 		49689AD021916A0F00B2A80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49689ACF21916A0F00B2A80A /* Assets.xcassets */; };
 		49689AD321916A0F00B2A80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49689AD121916A0F00B2A80A /* LaunchScreen.storyboard */; };
-		49689ADD21917B4F00B2A80A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 49689ADC21917B4F00B2A80A /* awsconfiguration.json */; };
+		49689AE32191929000B2A80A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 49689AE22191929000B2A80A /* awsconfiguration.json */; };
 		B262B2A4559B2F283116F3BE /* Pods_AwsDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605E8C2BEF0A469A91E7BFD /* Pods_AwsDemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		49689ACF21916A0F00B2A80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49689AD221916A0F00B2A80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49689AD421916A0F00B2A80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49689ADC21917B4F00B2A80A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		49689AE22191929000B2A80A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		7605E8C2BEF0A469A91E7BFD /* Pods_AwsDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwsDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			children = (
 				49689AC821916A0C00B2A80A /* AppDelegate.swift */,
 				49689ACA21916A0C00B2A80A /* ViewController.swift */,
-				49689ADC21917B4F00B2A80A /* awsconfiguration.json */,
+				49689AE22191929000B2A80A /* awsconfiguration.json */,
 				49689ACC21916A0C00B2A80A /* Main.storyboard */,
 				49689ACF21916A0F00B2A80A /* Assets.xcassets */,
 				49689AD121916A0F00B2A80A /* LaunchScreen.storyboard */,
@@ -103,6 +103,7 @@
 				49689AC221916A0C00B2A80A /* Frameworks */,
 				49689AC321916A0C00B2A80A /* Resources */,
 				7CEE6F2F6391C928745BCAF6 /* [CP] Embed Pods Frameworks */,
+				120A673BDF8E629776BC32A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,7 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49689ADD21917B4F00B2A80A /* awsconfiguration.json in Resources */,
+				49689AE32191929000B2A80A /* awsconfiguration.json in Resources */,
 				49689AD321916A0F00B2A80A /* LaunchScreen.storyboard in Resources */,
 				49689AD021916A0F00B2A80A /* Assets.xcassets in Resources */,
 				49689ACE21916A0C00B2A80A /* Main.storyboard in Resources */,
@@ -161,6 +162,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		120A673BDF8E629776BC32A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AwsDemoApp/Pods-AwsDemoApp-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AwsDemoApp/Pods-AwsDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CEE6F2F6391C928745BCAF6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,8 +192,16 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSGoogleSignIn/AWSGoogleSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -183,8 +210,16 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSGoogleSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
