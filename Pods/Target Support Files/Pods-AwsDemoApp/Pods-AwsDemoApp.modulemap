@@ -1,0 +1,6 @@
+framework module Pods_AwsDemoApp {
+  umbrella header "Pods-AwsDemoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
