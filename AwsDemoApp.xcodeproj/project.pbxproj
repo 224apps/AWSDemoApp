@@ -12,7 +12,8 @@
 		49689ACE21916A0C00B2A80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49689ACC21916A0C00B2A80A /* Main.storyboard */; };
 		49689AD021916A0F00B2A80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49689ACF21916A0F00B2A80A /* Assets.xcassets */; };
 		49689AD321916A0F00B2A80A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49689AD121916A0F00B2A80A /* LaunchScreen.storyboard */; };
-		49689AE32191929000B2A80A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 49689AE22191929000B2A80A /* awsconfiguration.json */; };
+		49689AE52191957B00B2A80A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 49689AE42191957B00B2A80A /* awsconfiguration.json */; };
+		49689AE9219195D400B2A80A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49689AE8219195D400B2A80A /* Note.swift */; };
 		B262B2A4559B2F283116F3BE /* Pods_AwsDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7605E8C2BEF0A469A91E7BFD /* Pods_AwsDemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,8 @@
 		49689ACF21916A0F00B2A80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49689AD221916A0F00B2A80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49689AD421916A0F00B2A80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49689AE22191929000B2A80A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		49689AE42191957B00B2A80A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		49689AE8219195D400B2A80A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		7605E8C2BEF0A469A91E7BFD /* Pods_AwsDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwsDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,15 +73,32 @@
 		49689AC721916A0C00B2A80A /* AwsDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				49689AE6219195D400B2A80A /* Models */,
 				49689AC821916A0C00B2A80A /* AppDelegate.swift */,
 				49689ACA21916A0C00B2A80A /* ViewController.swift */,
-				49689AE22191929000B2A80A /* awsconfiguration.json */,
+				49689AE42191957B00B2A80A /* awsconfiguration.json */,
 				49689ACC21916A0C00B2A80A /* Main.storyboard */,
 				49689ACF21916A0F00B2A80A /* Assets.xcassets */,
 				49689AD121916A0F00B2A80A /* LaunchScreen.storyboard */,
 				49689AD421916A0F00B2A80A /* Info.plist */,
 			);
 			path = AwsDemoApp;
+			sourceTree = "<group>";
+		};
+		49689AE6219195D400B2A80A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49689AE7219195D400B2A80A /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49689AE7219195D400B2A80A /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				49689AE8219195D400B2A80A /* Note.swift */,
+			);
+			path = NoSQL;
 			sourceTree = "<group>";
 		};
 		7E67EF89D33ACFC3B9690DB3 /* Pods */ = {
@@ -152,7 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49689AE32191929000B2A80A /* awsconfiguration.json in Resources */,
+				49689AE52191957B00B2A80A /* awsconfiguration.json in Resources */,
 				49689AD321916A0F00B2A80A /* LaunchScreen.storyboard in Resources */,
 				49689AD021916A0F00B2A80A /* Assets.xcassets in Resources */,
 				49689ACE21916A0C00B2A80A /* Main.storyboard in Resources */,
@@ -192,6 +211,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSGoogleSignIn/AWSGoogleSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
@@ -210,6 +230,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSGoogleSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
@@ -253,6 +274,7 @@
 			files = (
 				49689ACB21916A0C00B2A80A /* ViewController.swift in Sources */,
 				49689AC921916A0C00B2A80A /* AppDelegate.swift in Sources */,
+				49689AE9219195D400B2A80A /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

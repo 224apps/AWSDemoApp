@@ -12,4 +12,5 @@ pod 'AWSAuthUI'
 pod 'AWSFacebookSignIn'
 pod 'AWSGoogleSignIn'
 pod 'GoogleSignIn'
+pod 'AWSDynamoDB'
 end
